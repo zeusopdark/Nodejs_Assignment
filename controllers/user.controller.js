@@ -19,7 +19,7 @@ export const registerUser = async (req, res, next) => {
     }
 
     try {
-        // Hash the password
+        // Hashing the password
         const hashPass = await bcrypt.hash(password, 10);
 
         const newUser = new User({ username, password: hashPass, email });
